@@ -1,7 +1,7 @@
 import CategoryRow from './CategoryRow';
 import ProductRow from './ProductRow';
 
-function ProductTable({ products }) {
+function ProductTable({ products, filterText, isInStocked }) {
     let previousCategory;
     let rows = [];
 

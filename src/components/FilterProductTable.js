@@ -1,11 +1,16 @@
+import { useState } from 'react';
+
 import SearchBar from './SearchBar';
 import ProductTable from './ProductTable';
 
 function FilterProductTable({ products }) {
+    const [filterText, setFilterText] = useState('');
+    const [isInStocked, setIsInStocked] = useState(false);
+
     return (
         <div>
-            <SearchBar />
-            <ProductTable products={products} />
+            <SearchBar filterText={filterText} isInStocked={isInStocked} />
+            <ProductTable filterText={filterText} isInStocked={isInStocked} products={products} />
         </div>
     )
 };
