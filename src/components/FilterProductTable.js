@@ -9,7 +9,7 @@ function FilterProductTable({ products }) {
 
     return (
         <div>
-            <SearchBar filterText={filterText} isInStocked={isInStocked} />
+            <SearchBar filterText={filterText} isInStocked={isInStocked} setFilterText={setFilterText} setIsInStocked={setIsInStocked} />
             <ProductTable filterText={filterText} isInStocked={isInStocked} products={products} />
         </div>
     )
